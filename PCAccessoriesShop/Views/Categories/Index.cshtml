@@ -1,47 +1,51 @@
 ﻿@model List<PCAccessoriesShop.ViewModels.CategoryViewModel>
 
 @{
-    ViewData["Title"] = "Категории";
+    ViewData["Title"] = "Categories";
 }
 
 <div class="container mt-5">
-    <h2 class="text-center mb-4">Категории</h2>
-
-    <div class="text-end mb-3">
-        <a asp-action="Create" class="btn btn-dark">+ Добави категория</a>
-    </div>
+    <h2 class="text-center mb-4">Categories</h2>
 
     @if (!Model.Any())
     {
         <div class="alert alert-info text-center">
-            Все още няма добавени категории.
+            Not added categories yet.
         </div>
     }
     else
     {
-        <div class="glass-container p-4">
-            <table class="table table-bordered table-hover shadow">
-                <thead class="table-dark">
-                    <tr>
-                        <th>ID</th>
-                        <th>Име</th>
-                        <th class="text-center">Действия</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var category in Model)
-                    {
-                        <tr>
-                            <td>@category.Id</td>
-                            <td>@category.Name</td>
-                            <td class="text-center">
-                                <a asp-action="Edit" asp-route-id="@category.Id" class="btn btn-sm btn-warning me-1">Редактирай</a>
-                                <a asp-action="Delete" asp-route-id="@category.Id" class="btn btn-sm btn-danger">Изтрий</a>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8">
+                <div class="text-end mb-3">
+                    <a asp-action="Create" class="btn btn-dark">+ Add category</a>
+                </div>
+
+                <div class="glass-container p-4">
+                    <table class="table table-bordered table-hover shadow">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var category in Model)
+                            {
+                                <tr>
+                                    <td>@category.Id</td>
+                                    <td>@category.Name</td>
+                                    <td class="text-center">
+                                        <a asp-action="Edit" asp-route-id="@category.Id" class="btn btn-sm btn-warning me-1">Edit</a>
+                                        <a asp-action="Delete" asp-route-id="@category.Id" class="btn btn-sm btn-danger">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     }
 </div>

@@ -1,35 +1,37 @@
 ﻿@model List<PCAccessoriesShop.ViewModels.OrderViewModel>
 @{
-    ViewData["Title"] = "Моите поръчки";
+    ViewData["Title"] = "My orders";
 }
 
 <div class="container mt-5">
-    <h2 class="text-center mb-4">Моите поръчки</h2>
+    <h2 class="text-center mb-4">My orders</h2>
 
     @if (!Model.Any())
     {
         <div class="alert alert-info text-center">
-            Нямате направени поръчки.
-            <a asp-controller="Products" asp-action="Index" class="text-decoration-none">Разгледайте продукти</a>.
+            No orders were made.
+            <a asp-controller="Products" asp-action="Index" class="text-decoration-none">Check out our products</a>.
         </div>
     }
     else
     {
-        foreach (var order in Model)
-        {
-            <div class="glass-container mb-4 p-4 shadow">
+    foreach (var order in Model)
+    {
+    <div class="row justify-content-center mb-4">
+        <div class="col-md-10 col-lg-8">
+            <div class="glass-container p-4 shadow">
                 <div class="d-flex justify-content-between align-items-center mb-2">
-                    <h5 class="mb-0">Поръчка №@order.OrderId</h5>
+                    <h5 class="mb-0">Order №@order.OrderId</h5>
                     <span class="text-muted">@order.OrderDate.ToString("dd.MM.yyyy HH:mm")</span>
                 </div>
                 <table class="table table-bordered align-middle mb-0">
                     <thead class="table-dark">
                         <tr>
-                            <th>Изображение</th>
-                            <th>Продукт</th>
-                            <th>Количество</th>
-                            <th>Ед. цена</th>
-                            <th>Общо</th>
+                            <th></th>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -41,19 +43,22 @@
                                 </td>
                                 <td>@item.ProductName</td>
                                 <td>@item.Quantity</td>
-                                <td>@item.UnitPrice.ToString("F2") лв.</td>
-                                <td>@item.TotalPrice.ToString("F2") лв.</td>
+                                <td>@item.UnitPrice.ToString("F2") BGN</td>
+                                        <td>@item.TotalPrice.ToString("F2") BGN</td>
                             </tr>
                         }
                     </tbody>
                     <tfoot>
                         <tr>
-                            <th colspan="4" class="text-end">Обща сума:</th>
-                            <th>@order.TotalPrice.ToString("F2") лв.</th>
+                            <th colspan="4" class="text-end">Grand total:</th>
+                                    <th>@order.TotalPrice.ToString("F2") BGN</th>
                         </tr>
                     </tfoot>
                 </table>
             </div>
-        }
+        </div>
+    </div>
     }
+    }
+
 </div>

@@ -6,6 +6,7 @@ using PCAccessoriesShop.Data;
 using PCAccessoriesShop.Models;
 using PCAccessoriesShop.ViewModels;
 
+
 namespace PCAccessoriesShop.Controllers
 {
     public class ProductsController : Controller
@@ -41,7 +42,6 @@ namespace PCAccessoriesShop.Controllers
                 Name = p.Name,
                 Description = p.Description,
                 Price = p.Price,
-                Quantity = p.Quantity,
                 ImageUrl = p.ImageUrl,
                 CategoryName = p.Category?.Name ?? "No category"
             }).ToList();
@@ -104,7 +104,6 @@ namespace PCAccessoriesShop.Controllers
                 Name = viewModel.Name,
                 Description = viewModel.Description,
                 Price = viewModel.Price,
-                Quantity = viewModel.Quantity,
                 ImageUrl = viewModel.ImageUrl,
                 CategoryId = viewModel.CategoryId
             };
@@ -128,7 +127,6 @@ namespace PCAccessoriesShop.Controllers
                 Name = product.Name,
                 Description = product.Description,
                 Price = product.Price,
-                Quantity = product.Quantity,
                 ImageUrl = product.ImageUrl,
                 CategoryId = product.CategoryId,
                 Categories = await GetCategoriesAsync()
@@ -156,7 +154,6 @@ namespace PCAccessoriesShop.Controllers
             product.Name = viewModel.Name;
             product.Description = viewModel.Description;
             product.Price = viewModel.Price;
-            product.Quantity = viewModel.Quantity;
             product.ImageUrl = viewModel.ImageUrl;
             product.CategoryId = viewModel.CategoryId;
 
@@ -229,7 +226,6 @@ namespace PCAccessoriesShop.Controllers
                 Name = product.Name,
                 Description = product.Description,
                 Price = product.Price,
-                Quantity = product.Quantity,
                 ImageUrl = product.ImageUrl,
                 CategoryName = product.Category?.Name ?? "No category"
             };

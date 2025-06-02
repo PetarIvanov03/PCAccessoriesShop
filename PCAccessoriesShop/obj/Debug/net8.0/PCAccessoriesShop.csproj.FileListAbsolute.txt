@@ -299,3 +299,4 @@ D:\Side Programming\NBU\PCAccessoriesShop\PCAccessoriesShop\bin\Debug\net8.0\Sys
 D:\Side Programming\NBU\PCAccessoriesShop\PCAccessoriesShop\bin\Debug\net8.0\System.Text.Encodings.Web.dll
 D:\Side Programming\NBU\PCAccessoriesShop\PCAccessoriesShop\bin\Debug\net8.0\System.Text.Json.dll
 D:\Side Programming\NBU\PCAccessoriesShop\PCAccessoriesShop\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+D:\Side Programming\NBU\PCAccessoriesShop\PCAccessoriesShop\obj\Debug\net8.0\PCAccessoriesShop.sourcelink.json

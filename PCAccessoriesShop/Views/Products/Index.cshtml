@@ -1,14 +1,14 @@
 ﻿@model PCAccessoriesShop.ViewModels.ProductListViewModel
 
 @{
-    ViewData["Title"] = "Продукти";
+    ViewData["Title"] = "Products";
 
     var currentSort = Context.Request.Query["sort"];
     var currentCategory = Context.Request.Query["category"];
 }
 
 <div class="container mt-5">
-    <h2 class="text-center mb-4">Списък с продукти</h2>
+    <h2 class="text-center mb-4">Product List</h2>
 
     <form asp-action="Index" method="get" class="row g-3 align-items-center mb-4">
      
@@ -21,7 +21,7 @@
     @if (!Model.Products.Any())
     {
         <div class="alert alert-info text-center">
-            Все още няма добавени продукти.
+            Still no items added.
         </div>
     }
     else
@@ -30,13 +30,13 @@
             <table class="table table-bordered table-hover shadow">
                 <thead class="table-dark">
                     <tr>
-                        <th>Изображение</th>
+                        <th>Image</th>
                         <th>
                             @{
                                 var nextSortName = currentSort == "name" ? "name_desc" : "name";
                             }
                             <a asp-action="Index" asp-route-sort="@nextSortName" asp-route-category="@currentCategory" class="text-white text-decoration-none">
-                                Име @(currentSort == "name" ? "↑" : currentSort == "name_desc" ? "↓" : "")
+                                Name @(currentSort == "name" ? "↑" : currentSort == "name_desc" ? "↓" : "")
                             </a>
                         </th>
                         <th>
@@ -44,12 +44,12 @@
                                 var nextSortPrice = currentSort == "price" ? "price_desc" : "price";
                             }
                             <a asp-action="Index" asp-route-sort="@nextSortPrice" asp-route-category="@currentCategory" class="text-white text-decoration-none">
-                                Цена @(currentSort == "price" ? "↑" : currentSort == "price_desc" ? "↓" : "")
+                                Price @(currentSort == "price" ? "↑" : currentSort == "price_desc" ? "↓" : "")
                             </a>
                         </th>
                         <th>
                             <select id="category" name="category" class="form-select dark-glass" onchange="this.form.submit()">
-                                <option value="">Всички</option>
+                                <option value="">All</option>
                                 @foreach (var item in Model.Categories)
                                 {
                                     string selected = item.Value == Model.SelectedCategory ? "selected=\"selected\"" : "";
@@ -59,7 +59,7 @@
                         </th>
                         @if (User.IsInRole("Admin"))
                             {
-                                <th class="text-center">Действия</th>
+                                <th class="text-center">Actions</th>
                             }
                     </tr>
                 </thead>
@@ -68,7 +68,7 @@
                     {
                         <tr style="cursor: pointer;" onclick="location.href='@Url.Action("Details", "Products", new { id = product.Id })'">
                             <td style="width: 100px;">
-                                <img src="@product.ImageUrl" alt="Изображение" class="img-thumbnail" style="max-height: 60px;" />
+                                <img src="@product.ImageUrl" alt="Image" class="img-thumbnail" style="max-height: 60px;" />
                             </td>
                             <td>@product.Name</td>
                             <td>@product.Price.ToString("F2")</td>
@@ -76,8 +76,8 @@
                             <td class="text-center">
                                 @if (User.IsInRole("Admin"))
                                 {
-                                    <a asp-action="Edit" asp-route-id="@product.Id" class="btn btn-outline-warning btn-sm me-1">Редактирай</a>
-                                    <a asp-action="Delete" asp-route-id="@product.Id" class="btn btn-outline-danger btn-sm">Изтрий</a>
+                                    <a asp-action="Edit" asp-route-id="@product.Id" class="btn btn-outline-warning btn-sm me-1">Edit</a>
+                                    <a asp-action="Delete" asp-route-id="@product.Id" class="btn btn-outline-danger btn-sm">Delete</a>
                                 }
                             </td>
                         </tr>

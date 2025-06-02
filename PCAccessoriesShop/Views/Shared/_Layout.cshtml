@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/PCAccessoriesShop.styles.css" asp-append-version="true" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body class="bg-dark text-light" style="font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
     <header>
@@ -39,7 +41,7 @@
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-light"
-                                   asp-controller="Cart" asp-action="Index">🛒 Shopping Cart</a>
+                                   asp-controller="Cart" asp-action="Index">Shopping Cart</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light"
@@ -60,7 +62,7 @@
         @RenderBody()
     </div>
 
-    <footer class="border-top footer text-muted mt-4">
+    <footer class="border-top footer text-muted mt-4 position-static">
         <div class="container text-center py-3">
             &copy; 2025 - PCAccessoriesShop - 
             <a asp-area="" asp-controller="Home" asp-action="Index" class="text-decoration-none text-light">Home</a>

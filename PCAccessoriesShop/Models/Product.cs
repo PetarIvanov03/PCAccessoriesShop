@@ -19,8 +19,6 @@ namespace PCAccessoriesShop.Models
         [Range(0.01, double.MaxValue)]
         public decimal Price { get; set; }
 
-        public int Quantity { get; set; }
-
         public string? ImageUrl { get; set; }
 
         public int CategoryId { get; set; }

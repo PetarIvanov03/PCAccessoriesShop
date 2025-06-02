@@ -8,7 +8,7 @@ using PCAccessoriesShop.Data;
 
 #nullable disable
 
-namespace PCAccessoriesShop.Data.Migrations
+namespace PCAccessoriesShop.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -333,7 +333,6 @@ namespace PCAccessoriesShop.Data.Migrations
                         .HasColumnType("nvarchar(1000)");
 
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -343,9 +342,6 @@ namespace PCAccessoriesShop.Data.Migrations
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
