@@ -1,0 +1,298 @@
+/* Default font size for small devices */
+html {
+    font-size: 14px;
+}
+
+/* Slightly larger font size on medium+ screens */
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Global focus styles for accessibility */
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+/* Ensure page always stretches full height */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+/* Global body styling: dark theme, modern font */
+body {
+    background: url('/Images/bg-neutral.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #f1f1f1;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Slightly rounded images with shadow */
+.rounded-img {
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Central layout container with padding */
+.main-wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Heading colors for dark background */
+h1, h2, h3, h4, h5 {
+    color: #ffffff;
+}
+
+/* Bigger title above table */
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Make the table use spacing between rows and remove collapse */
+.table {
+    border-collapse: separate;
+    border-spacing: 0 0.75rem;
+    width: 100%;
+    background-color: transparent;
+    color: #f1f1f1;
+    margin-bottom: 5rem;
+}
+
+    /* Remove background from table headers */
+    .table thead tr {
+        background-color: transparent;
+    }
+
+    /* Column headers – larger and bolder text */
+    .table th {
+        font-weight: 500;
+        text-align: center;
+        padding: 0.9rem;
+        font-size: 1.3rem;
+        background: none !important;
+        border: none;
+        vertical-align: middle;
+    }
+
+        /* Style sortable links in headers */
+        .table th a {
+            color: #f1f1f1;
+            text-decoration: none;
+            font-weight: normal;
+            font-size: 1.3rem;
+            display: inline-block;
+            min-width: 80px;
+            text-align: center;
+            transition: font-weight 0.2s ease, color 0.2s ease;
+        }
+
+            .table th a:hover {
+                font-weight: bold;
+                color: #ffffff;
+                text-decoration: none;
+            }
+
+    /* Make each row look like a card with shadow and rounded edges */
+    .table tbody tr {
+        background-color: #1e1e1e;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        cursor: pointer; /* clickable row effect */
+    }
+
+    /* Padding inside row cells */
+    .table td {
+        padding: 0.5rem 0.6rem;
+        border: none;
+        color: #ffffff;
+        text-align: center;
+        vertical-align: middle; /* <--- center content vertically */
+        font-size: 1rem;
+    }
+
+    /* Round edges only at ends */
+    .table tbody tr td:first-child {
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+    }
+
+    .table tbody tr td:last-child {
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+
+    /* Align checkboxes vertically centered */
+    .table td input[type="checkbox"] {
+        margin: auto;
+        display: block;
+    }
+
+    /* Reduce padding between image and edges */
+    .table img.rounded-img {
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        width: 64px;
+        height: auto;
+        margin: 0.2rem auto; /* center vertically, reduce spacing */
+        display: block;
+    }
+
+
+
+
+/* Header cell default: normal font weight, centered */
+th {
+    font-weight: normal;
+    text-align: center;
+    padding: 0.75rem;
+}
+
+    /* Sortable column links: no underline, fixed width */
+    th a {
+        color: #f1f1f1;
+        text-decoration: none;
+        font-weight: normal;
+        display: inline-block;
+        min-width: 80px; /* prevents shifting when bold on hover */
+        text-align: center;
+        transition: font-weight 0.2s ease, color 0.2s ease;
+    }
+
+        /* Bold on hover for sortable links without layout shift */
+        th a:hover {
+            font-weight: bold;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+
+
+/* Base dark checkbox */
+input[type="checkbox"] {
+    appearance: none;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: #181818;
+    border: 1px solid #444;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+    /* When checked */
+    input[type="checkbox"]:checked {
+        background-color: #2a2a2a;
+    }
+
+        input[type="checkbox"]:checked::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 10px;
+            border: solid #ccc;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            display: block;
+            top: 45%;
+            left: 51%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+
+
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 40px 120px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    max-width: 900px;
+    width: 95%;
+}
+
+.logo {
+    height: 100px;
+    filter: drop-shadow(0 0 10px #007bff);
+}
+
+.btn-outline-light {
+    border: 1px solid #fff;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+    .btn-outline-light:hover {
+        background-color: #007bff;
+        border-color: #007bff;
+        color: #fff;
+    }
+
+
+
+footer {
+    background-color: #121212;
+    border-top: 1px solid #2c2c2c;
+    padding: 0 0;
+    font-size: 1rem;
+    color: #aaa;
+    text-align: center;
+}
+
+
+
+.error-code {
+    font-size: 8rem;
+    font-weight: 800;
+    color: #e74c3c;
+    text-shadow: 0 0 10px rgba(231, 76, 60, 0.6), 0 0 20px rgba(231, 76, 60, 0.5), 0 0 30px rgba(231, 76, 60, 0.4);
+    margin-bottom: 1rem;
+}
+
+.error-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+
+.form-select.dark-glass {
+    background-color: rgba(30, 30, 30, 0.6);
+    border: 1px solid #444;
+    color: #fff;
+    backdrop-filter: blur(8px);
+    border-radius: 6px;
+    padding: 6px 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+    .form-select.dark-glass:focus {
+        outline: none;
+        border-color: #6c757d;
+        background-color: rgba(40, 40, 40, 0.75);
+    }

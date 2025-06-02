@@ -1,0 +1,59 @@
+﻿@model List<PCAccessoriesShop.ViewModels.OrderViewModel>
+@{
+    ViewData["Title"] = "Моите поръчки";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Моите поръчки</h2>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info text-center">
+            Нямате направени поръчки.
+            <a asp-controller="Products" asp-action="Index" class="text-decoration-none">Разгледайте продукти</a>.
+        </div>
+    }
+    else
+    {
+        foreach (var order in Model)
+        {
+            <div class="glass-container mb-4 p-4 shadow">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h5 class="mb-0">Поръчка №@order.OrderId</h5>
+                    <span class="text-muted">@order.OrderDate.ToString("dd.MM.yyyy HH:mm")</span>
+                </div>
+                <table class="table table-bordered align-middle mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Изображение</th>
+                            <th>Продукт</th>
+                            <th>Количество</th>
+                            <th>Ед. цена</th>
+                            <th>Общо</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in order.Items)
+                        {
+                            <tr>
+                                <td style="width: 80px;">
+                                    <img src="@item.ImageUrl" alt="@item.ProductName" class="img-thumbnail" style="max-width: 70px;" />
+                                </td>
+                                <td>@item.ProductName</td>
+                                <td>@item.Quantity</td>
+                                <td>@item.UnitPrice.ToString("F2") лв.</td>
+                                <td>@item.TotalPrice.ToString("F2") лв.</td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="4" class="text-end">Обща сума:</th>
+                            <th>@order.TotalPrice.ToString("F2") лв.</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        }
+    }
+</div>

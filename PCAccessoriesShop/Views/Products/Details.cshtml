@@ -1,0 +1,51 @@
+﻿@model PCAccessoriesShop.ViewModels.ProductViewModel
+
+@{
+    ViewData["Title"] = "Детайли на продукт";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Детайли на продукт</h2>
+
+    <div class="glass-container mx-auto p-4">
+        <dl class="row">
+            <dt class="col-sm-3">Име</dt>
+            <dd class="col-sm-9">@Model.Name</dd>
+
+            <dt class="col-sm-3">Описание</dt>
+            <dd class="col-sm-9">@Model.Description</dd>
+
+            <dt class="col-sm-3">Цена (лв.)</dt>
+            <dd class="col-sm-9">@Model.Price.ToString("F2")</dd>
+
+            <dt class="col-sm-3">Количество</dt>
+            <dd class="col-sm-9">@Model.Quantity</dd>
+
+            <dt class="col-sm-3">Категория</dt>
+            <dd class="col-sm-9">@Model.CategoryName</dd>
+
+            <dt class="col-sm-3">Изображение</dt>
+            <dd class="col-sm-9">
+                <img src="@Model.ImageUrl" alt="Изображение" class="img-fluid rounded-img" />
+            </dd>
+        </dl>
+
+        <div class="text-end mt-4">
+            @if (User.IsInRole("Admin"))
+            {
+                <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-warning me-2">Редактирай</a>
+                <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-outline-danger me-2">Изтрий</a>
+            }
+
+            <a asp-action="Index" class="btn btn-secondary me-2">Обратно към списъка</a>
+
+            @if (User.Identity.IsAuthenticated)
+            {
+                <form asp-controller="Cart" asp-action="Add" method="post" class="d-inline">
+                    <input type="hidden" name="productId" value="@Model.Id" />
+                    <button type="submit" class="btn btn-outline-success">🛒 Добави в количка</button>
+                </form>
+            }
+        </div>
+    </div>
+</div>

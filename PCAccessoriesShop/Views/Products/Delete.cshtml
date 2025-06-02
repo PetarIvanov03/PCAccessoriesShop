@@ -1,0 +1,41 @@
+﻿@model PCAccessoriesShop.ViewModels.ProductViewModel
+
+@{
+    ViewData["Title"] = "Изтриване на продукт";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Сигурни ли сте, че искате да изтриете този продукт?</h2>
+
+    <div class="glass-container mx-auto p-4">
+        <dl class="row">
+            <dt class="col-sm-3">Име</dt>
+            <dd class="col-sm-9">@Model.Name</dd>
+
+            <dt class="col-sm-3">Описание</dt>
+            <dd class="col-sm-9">@Model.Description</dd>
+
+            <dt class="col-sm-3">Цена (лв.)</dt>
+            <dd class="col-sm-9">@Model.Price.ToString("F2")</dd>
+
+            <dt class="col-sm-3">Количество</dt>
+            <dd class="col-sm-9">@Model.Quantity</dd>
+
+            <dt class="col-sm-3">Категория</dt>
+            <dd class="col-sm-9">@Model.CategoryName</dd>
+
+            <dt class="col-sm-3">Изображение</dt>
+            <dd class="col-sm-9">
+                <img src="@Model.ImageUrl" alt="Изображение" class="img-fluid rounded-img" />
+            </dd>
+        </dl>
+
+        <form asp-action="Delete" method="post">
+            <input type="hidden" asp-for="Id" />
+            <div class="text-end mt-4">
+                <button type="submit" class="btn btn-danger me-2">Изтрий</button>
+                <a asp-action="Index" class="btn btn-secondary">Откажи</a>
+            </div>
+        </form>
+    </div>
+</div>

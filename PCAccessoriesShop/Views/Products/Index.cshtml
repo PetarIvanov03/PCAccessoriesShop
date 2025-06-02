@@ -1,0 +1,91 @@
+﻿@model PCAccessoriesShop.ViewModels.ProductListViewModel
+
+@{
+    ViewData["Title"] = "Продукти";
+
+    var currentSort = Context.Request.Query["sort"];
+    var currentCategory = Context.Request.Query["category"];
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Списък с продукти</h2>
+
+    <form asp-action="Index" method="get" class="row g-3 align-items-center mb-4">
+     
+    @if (User.IsInRole("Admin"))
+    {
+        <div class="text-end mb-3">
+            <a asp-action="Create" class="btn btn-dark">+ Add Product</a>
+        </div>
+    }
+    @if (!Model.Products.Any())
+    {
+        <div class="alert alert-info text-center">
+            Все още няма добавени продукти.
+        </div>
+    }
+    else
+    {
+        <div class="glass-container mx-auto p-4">
+            <table class="table table-bordered table-hover shadow">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Изображение</th>
+                        <th>
+                            @{
+                                var nextSortName = currentSort == "name" ? "name_desc" : "name";
+                            }
+                            <a asp-action="Index" asp-route-sort="@nextSortName" asp-route-category="@currentCategory" class="text-white text-decoration-none">
+                                Име @(currentSort == "name" ? "↑" : currentSort == "name_desc" ? "↓" : "")
+                            </a>
+                        </th>
+                        <th>
+                            @{
+                                var nextSortPrice = currentSort == "price" ? "price_desc" : "price";
+                            }
+                            <a asp-action="Index" asp-route-sort="@nextSortPrice" asp-route-category="@currentCategory" class="text-white text-decoration-none">
+                                Цена @(currentSort == "price" ? "↑" : currentSort == "price_desc" ? "↓" : "")
+                            </a>
+                        </th>
+                        <th>
+                            <select id="category" name="category" class="form-select dark-glass" onchange="this.form.submit()">
+                                <option value="">Всички</option>
+                                @foreach (var item in Model.Categories)
+                                {
+                                    string selected = item.Value == Model.SelectedCategory ? "selected=\"selected\"" : "";
+                                    @:<option value="@item.Value" @Html.Raw(selected)>@item.Text</option>
+                                }
+                            </select>
+                        </th>
+                        @if (User.IsInRole("Admin"))
+                            {
+                                <th class="text-center">Действия</th>
+                            }
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var product in Model.Products)
+                    {
+                        <tr style="cursor: pointer;" onclick="location.href='@Url.Action("Details", "Products", new { id = product.Id })'">
+                            <td style="width: 100px;">
+                                <img src="@product.ImageUrl" alt="Изображение" class="img-thumbnail" style="max-height: 60px;" />
+                            </td>
+                            <td>@product.Name</td>
+                            <td>@product.Price.ToString("F2")</td>
+                            <td>@product.CategoryName</td>
+                            <td class="text-center">
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <a asp-action="Edit" asp-route-id="@product.Id" class="btn btn-outline-warning btn-sm me-1">Редактирай</a>
+                                    <a asp-action="Delete" asp-route-id="@product.Id" class="btn btn-outline-danger btn-sm">Изтрий</a>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    </form>
+
+</div>
