@@ -1,20 +1,19 @@
 ﻿@{
     Layout = "_Layout";
-    var code = ViewBag.StatusCode ?? 500;
+    var code = ViewBag.StatusCode;
     ViewData["Title"] = "Error";
     string message = code switch
     {
-        404 => "Страницата не беше намерена.",
-        403 => "Нямате достъп до тази страница.",
-        500 => "Възникна вътрешна грешка в сървъра.",
-        _ => "Нещо се обърка."
+        404 => "The page was not found.",
+        403 => "You do not have access to this page.",
+        500 => "An internal server error occurred.",
+        _ => "Something went wrong."
     };
 }
 
-
 <div class="container text-center py-5 glass-container">
-    <h1 class="error-code">404</h1>
-    <p class="error-text">Страницата не беше намерена.</p>
-    <a href="/" class="btn btn-outline-light mt-3">Начало</a>
+    <h1 class="error-code">@code</h1>
+    <p class="error-text">@message</p>
+    <a href="/" class="btn btn-outline-light mt-3">Home</a>
 
 </div>

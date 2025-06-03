@@ -52,8 +52,8 @@
                                 <option value="">All</option>
                                 @foreach (var item in Model.Categories)
                                 {
-                                    string selected = item.Value == Model.SelectedCategory ? "selected=\"selected\"" : "";
-                                    @:<option value="@item.Value" @Html.Raw(selected)>@item.Text</option>
+                                    string selected = item.Text == Model.SelectedCategory ? "selected=\"selected\"" : "";
+                                    @:<option value="@item.Text" @Html.Raw(selected)>@item.Text</option>
                                 }
                             </select>
                         </th>

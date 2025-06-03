@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PCAccessoriesShop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f70bc1ff24b1b9e4c08214a53846bc0ac5b337de")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c53271fbd3a8c9ef67abc62931061d634d99894")]
 [assembly: System.Reflection.AssemblyProductAttribute("PCAccessoriesShop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PCAccessoriesShop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

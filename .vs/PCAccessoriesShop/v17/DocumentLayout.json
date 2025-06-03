@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "D:\\Side Programming\\NBU\\PCAccessoriesShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{59CB6A6C-A38F-4332-821B-6EE9AC56BAFB}|PCAccessoriesShop\\PCAccessoriesShop.csproj|d:\\side programming\\nbu\\pcaccessoriesshop\\pcaccessoriesshop\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{59CB6A6C-A38F-4332-821B-6EE9AC56BAFB}|PCAccessoriesShop\\PCAccessoriesShop.csproj|solutionrelative:pcaccessoriesshop\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{59CB6A6C-A38F-4332-821B-6EE9AC56BAFB}|PCAccessoriesShop\\PCAccessoriesShop.csproj|d:\\side programming\\nbu\\pcaccessoriesshop\\pcaccessoriesshop\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{59CB6A6C-A38F-4332-821B-6EE9AC56BAFB}|PCAccessoriesShop\\PCAccessoriesShop.csproj|solutionrelative:pcaccessoriesshop\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59CB6A6C-A38F-4332-821B-6EE9AC56BAFB}|PCAccessoriesShop\\PCAccessoriesShop.csproj|d:\\side programming\\nbu\\pcaccessoriesshop\\pcaccessoriesshop\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{59CB6A6C-A38F-4332-821B-6EE9AC56BAFB}|PCAccessoriesShop\\PCAccessoriesShop.csproj|solutionrelative:pcaccessoriesshop\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{59CB6A6C-A38F-4332-821B-6EE9AC56BAFB}|PCAccessoriesShop\\PCAccessoriesShop.csproj|d:\\side programming\\nbu\\pcaccessoriesshop\\pcaccessoriesshop\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59CB6A6C-A38F-4332-821B-6EE9AC56BAFB}|PCAccessoriesShop\\PCAccessoriesShop.csproj|solutionrelative:pcaccessoriesshop\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59CB6A6C-A38F-4332-821B-6EE9AC56BAFB}|PCAccessoriesShop\\PCAccessoriesShop.csproj|d:\\side programming\\nbu\\pcaccessoriesshop\\pcaccessoriesshop\\views\\products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{59CB6A6C-A38F-4332-821B-6EE9AC56BAFB}|PCAccessoriesShop\\PCAccessoriesShop.csproj|solutionrelative:pcaccessoriesshop\\views\\products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59CB6A6C-A38F-4332-821B-6EE9AC56BAFB}|PCAccessoriesShop\\PCAccessoriesShop.csproj|d:\\side programming\\nbu\\pcaccessoriesshop\\pcaccessoriesshop\\views\\products\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{59CB6A6C-A38F-4332-821B-6EE9AC56BAFB}|PCAccessoriesShop\\PCAccessoriesShop.csproj|solutionrelative:pcaccessoriesshop\\views\\products\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{59CB6A6C-A38F-4332-821B-6EE9AC56BAFB}|PCAccessoriesShop\\PCAccessoriesShop.csproj|d:\\side programming\\nbu\\pcaccessoriesshop\\pcaccessoriesshop\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59CB6A6C-A38F-4332-821B-6EE9AC56BAFB}|PCAccessoriesShop\\PCAccessoriesShop.csproj|solutionrelative:pcaccessoriesshop\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "site.css",
-              "DocumentMoniker": "D:\\Side Programming\\NBU\\PCAccessoriesShop\\PCAccessoriesShop\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "PCAccessoriesShop\\wwwroot\\css\\site.css",
-              "ToolTip": "D:\\Side Programming\\NBU\\PCAccessoriesShop\\PCAccessoriesShop\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "PCAccessoriesShop\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAABcAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-06-02T21:22:04.368Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\Side Programming\\NBU\\PCAccessoriesShop\\PCAccessoriesShop\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "PCAccessoriesShop\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\Side Programming\\NBU\\PCAccessoriesShop\\PCAccessoriesShop\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "PCAccessoriesShop\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAACwAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-02T21:20:15.173Z",
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "D:\\Side Programming\\NBU\\PCAccessoriesShop\\PCAccessoriesShop\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "PCAccessoriesShop\\Services\\ProductService.cs",
+              "ToolTip": "D:\\Side Programming\\NBU\\PCAccessoriesShop\\PCAccessoriesShop\\Services\\ProductService.cs",
+              "RelativeToolTip": "PCAccessoriesShop\\Services\\ProductService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T17:05:26.478Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\Side Programming\\NBU\\PCAccessoriesShop\\PCAccessoriesShop\\Views\\Products\\Details.cshtml",
-              "RelativeDocumentMoniker": "PCAccessoriesShop\\Views\\Products\\Details.cshtml",
-              "ToolTip": "D:\\Side Programming\\NBU\\PCAccessoriesShop\\PCAccessoriesShop\\Views\\Products\\Details.cshtml",
-              "RelativeToolTip": "PCAccessoriesShop\\Views\\Products\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-02T21:18:00.277Z",
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "D:\\Side Programming\\NBU\\PCAccessoriesShop\\PCAccessoriesShop\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "PCAccessoriesShop\\Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\Side Programming\\NBU\\PCAccessoriesShop\\PCAccessoriesShop\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "PCAccessoriesShop\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T17:05:00.559Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "D:\\Side Programming\\NBU\\PCAccessoriesShop\\PCAccessoriesShop\\Views\\Products\\Delete.cshtml",
-              "RelativeDocumentMoniker": "PCAccessoriesShop\\Views\\Products\\Delete.cshtml",
-              "ToolTip": "D:\\Side Programming\\NBU\\PCAccessoriesShop\\PCAccessoriesShop\\Views\\Products\\Delete.cshtml",
-              "RelativeToolTip": "PCAccessoriesShop\\Views\\Products\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABLAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Side Programming\\NBU\\PCAccessoriesShop\\PCAccessoriesShop\\Views\\Products\\Index.cshtml",
+              "RelativeDocumentMoniker": "PCAccessoriesShop\\Views\\Products\\Index.cshtml",
+              "ToolTip": "D:\\Side Programming\\NBU\\PCAccessoriesShop\\PCAccessoriesShop\\Views\\Products\\Index.cshtml",
+              "RelativeToolTip": "PCAccessoriesShop\\Views\\Products\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-02T21:17:58.814Z",
+              "WhenOpened": "2025-06-03T16:59:52.782Z",
               "EditorCaption": ""
             }
           ]

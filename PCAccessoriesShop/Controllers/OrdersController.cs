@@ -1,55 +1,31 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using PCAccessoriesShop.Data;
-using PCAccessoriesShop.Models;
-using PCAccessoriesShop.ViewModels;
-using System.Linq;
+using PCAccessoriesShop.Services;
 using System.Security.Claims;
-using System.Threading.Tasks;
 
 namespace PCAccessoriesShop.Controllers
 {
     [Authorize]
     public class OrdersController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IOrderService _service;
 
-        public OrdersController(ApplicationDbContext context)
+        public OrdersController(IOrderService service)
         {
-            _context = context;
+            _service = service;
         }
 
         [HttpPost]
         public async Task<IActionResult> Checkout()
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var (success, message) = await _service.CheckoutAsync(userId);
 
-            var cartItems = await _context.CartItems
-                .Include(ci => ci.Product)
-                .Where(ci => ci.UserId == userId)
-                .ToListAsync();
-
-            if (!cartItems.Any())
+            if (!success)
             {
-                TempData["Error"] = "Your cart is empty.";
+                TempData["Error"] = message;
                 return RedirectToAction("Index", "Cart");
             }
-
-            var order = new Order
-            {
-                UserId = userId,
-                Items = cartItems.Select(ci => new OrderItem
-                {
-                    ProductId = ci.ProductId,
-                    Quantity = ci.Quantity,
-                    UnitPrice = ci.Product.Price
-                }).ToList()
-            };
-
-            _context.Orders.Add(order);
-            _context.CartItems.RemoveRange(cartItems);
-            await _context.SaveChangesAsync();
 
             TempData["Success"] = "Your order was successfully placed!";
             return RedirectToAction("MyOrders");
@@ -58,32 +34,9 @@ namespace PCAccessoriesShop.Controllers
         public async Task<IActionResult> MyOrders()
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-
-            var orders = await _context.Orders
-                .Where(o => o.UserId == userId)
-                .Include(o => o.Items)
-                    .ThenInclude(i => i.Product)
-                .OrderByDescending(o => o.OrderDate)
-                .ToListAsync();
-
-            var orderVMs = orders.Select(MapToViewModel).ToList();
-            return View(orderVMs);
-        }
-
-        private static OrderViewModel MapToViewModel(Order o)
-        {
-            return new OrderViewModel
-            {
-                OrderId = o.Id,
-                OrderDate = o.OrderDate,
-                Items = o.Items.Select(i => new OrderItemViewModel
-                {
-                    ProductName = i.Product.Name,
-                    Quantity = i.Quantity,
-                    UnitPrice = i.UnitPrice,
-                    ImageUrl = i.Product.ImageUrl
-                }).ToList()
-            };
+            var viewModel = await _service.GetUserOrdersAsync(userId);
+            return View(viewModel);
         }
     }
+
 }

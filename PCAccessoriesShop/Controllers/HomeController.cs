@@ -1,7 +1,4 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using PCAccessoriesShop.Models;
-using PCAccessoriesShop.ViewModels;
 
 namespace PCAccessoriesShop.Controllers
 {
@@ -19,10 +16,18 @@ namespace PCAccessoriesShop.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        [Route("Home/Error")]
         public IActionResult Error()
         {
-            return View();
+            ViewBag.StatusCode = 500;
+            return View("Error");
+        }
+
+        [Route("Home/Error/{statusCode}")]
+        public IActionResult ErrorStatus(int statusCode)
+        {
+            ViewBag.StatusCode = statusCode;
+            return View("Error");
         }
     }
 }

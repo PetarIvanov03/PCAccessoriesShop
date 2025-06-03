@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EoaI9LvBiARLtd77uE+RIj3rpy/4ZCaYYySuB05pO/k=",
+  "Hash": "6ymn2Sr41q22uADFQ5RowJPuVhpa0H7HWfi4IIP5SSw=",
   "Source": "PCAccessoriesShop",
   "BasePath": "_content/PCAccessoriesShop",
   "Mode": "Default",
@@ -2771,7 +2771,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 16:38:33 GMT"
+          "Value": "Mon, 02 Jun 2025 21:24:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2808,7 +2808,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 16:38:33 GMT"
+          "Value": "Mon, 02 Jun 2025 21:24:29 GMT"
         },
         {
           "Name": "Cache-Control",
