@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Side Programming\\NBU\\PCAccessoriesShop\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{59CB6A6C-A38F-4332-821B-6EE9AC56BAFB}|PCAccessoriesShop\\PCAccessoriesShop.csproj|d:\\side programming\\nbu\\pcaccessoriesshop\\pcaccessoriesshop\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{59CB6A6C-A38F-4332-821B-6EE9AC56BAFB}|PCAccessoriesShop\\PCAccessoriesShop.csproj|solutionrelative:pcaccessoriesshop\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{59CB6A6C-A38F-4332-821B-6EE9AC56BAFB}|PCAccessoriesShop\\PCAccessoriesShop.csproj|d:\\side programming\\nbu\\pcaccessoriesshop\\pcaccessoriesshop\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{59CB6A6C-A38F-4332-821B-6EE9AC56BAFB}|PCAccessoriesShop\\PCAccessoriesShop.csproj|solutionrelative:pcaccessoriesshop\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -22,11 +26,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Side Programming\\NBU\\PCAccessoriesShop\\PCAccessoriesShop\\appsettings.json",
+              "RelativeDocumentMoniker": "PCAccessoriesShop\\appsettings.json",
+              "ToolTip": "D:\\Side Programming\\NBU\\PCAccessoriesShop\\PCAccessoriesShop\\appsettings.json",
+              "RelativeToolTip": "PCAccessoriesShop\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-03T17:14:37.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ProductService.cs",
               "DocumentMoniker": "D:\\Side Programming\\NBU\\PCAccessoriesShop\\PCAccessoriesShop\\Services\\ProductService.cs",
               "RelativeDocumentMoniker": "PCAccessoriesShop\\Services\\ProductService.cs",
@@ -34,12 +51,11 @@
               "RelativeToolTip": "PCAccessoriesShop\\Services\\ProductService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T17:05:26.478Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T17:05:26.478Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "D:\\Side Programming\\NBU\\PCAccessoriesShop\\PCAccessoriesShop\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "PCAccessoriesShop\\Controllers\\ProductsController.cs",
@@ -47,18 +63,17 @@
               "RelativeToolTip": "PCAccessoriesShop\\Controllers\\ProductsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T17:05:00.559Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T17:05:00.559Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Side Programming\\NBU\\PCAccessoriesShop\\PCAccessoriesShop\\Views\\Products\\Index.cshtml",
               "RelativeDocumentMoniker": "PCAccessoriesShop\\Views\\Products\\Index.cshtml",
               "ToolTip": "D:\\Side Programming\\NBU\\PCAccessoriesShop\\PCAccessoriesShop\\Views\\Products\\Index.cshtml",
               "RelativeToolTip": "PCAccessoriesShop\\Views\\Products\\Index.cshtml",
-              "ViewState": "AgIAABYAAAAAAAAAAAAkwDQAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAowBwAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-03T16:59:52.782Z",
               "EditorCaption": ""
